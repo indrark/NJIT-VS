@@ -2,12 +2,12 @@ package com.njit.buddy.app;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
-import com.njit.buddy.app.network.task.BuddyUseTask;
+import com.njit.buddy.app.network.task.VSistersUseTask;
 
 /**
  * @author toyknight 3/6/2016.
  */
-public class BuddyResumeRecordingActivity extends AppCompatActivity {
+public class VSistersResumeRecordingActivity extends AppCompatActivity {
 
     private boolean intent = false;
 
@@ -15,7 +15,7 @@ public class BuddyResumeRecordingActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         if (!intent) {
-            new BuddyUseTask().execute();
+            new VSistersUseTask().execute();
         }
         intent = false;
     }

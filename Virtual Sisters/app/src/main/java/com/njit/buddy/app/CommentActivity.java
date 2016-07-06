@@ -17,8 +17,8 @@ import com.njit.buddy.app.entity.Comment;
 import com.njit.buddy.app.network.task.CommentCreateTask;
 import com.njit.buddy.app.network.task.CommentListTask;
 import com.njit.buddy.app.util.Log;
-import com.njit.buddy.app.widget.BuddyScrollListener;
-import com.njit.buddy.app.widget.BuddyScrollView;
+import com.njit.buddy.app.widget.VSistersScrollListener;
+import com.njit.buddy.app.widget.VSistersScrollView;
 import com.njit.buddy.app.widget.CommentView;
 
 import java.util.ArrayList;
@@ -76,8 +76,8 @@ public class CommentActivity extends AppCompatActivity {
                 return false;
             }
         });
-        BuddyScrollView comment_scroll_view = (BuddyScrollView) findViewById(R.id.scroll_view_comments);
-        comment_scroll_view.setScrollListener(new BuddyScrollListener() {
+        VSistersScrollView comment_scroll_view = (VSistersScrollView) findViewById(R.id.scroll_view_comments);
+        comment_scroll_view.setScrollListener(new VSistersScrollListener() {
             @Override
             public void onBottomReached() {
                 tryReadMoreComments();

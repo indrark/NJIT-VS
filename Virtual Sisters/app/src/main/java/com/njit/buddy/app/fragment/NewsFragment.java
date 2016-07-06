@@ -58,8 +58,8 @@ public class NewsFragment extends Fragment implements CategorySelectorListener {
                     }
                 }
         );
-        BuddyScrollView post_scroll_view = (BuddyScrollView) getActivity().findViewById(R.id.scroll_view_news);
-        post_scroll_view.setScrollListener(new BuddyScrollListener() {
+        VSistersScrollView post_scroll_view = (VSistersScrollView) getActivity().findViewById(R.id.scroll_view_news);
+        post_scroll_view.setScrollListener(new VSistersScrollListener() {
             @Override
             public void onBottomReached() {
                 tryReadMorePosts();

@@ -11,8 +11,8 @@ import com.njit.buddy.app.entity.Hug;
 import com.njit.buddy.app.network.task.HugListTask;
 import com.njit.buddy.app.util.Log;
 import com.njit.buddy.app.widget.HugView;
-import com.njit.buddy.app.widget.BuddyScrollListener;
-import com.njit.buddy.app.widget.BuddyScrollView;
+import com.njit.buddy.app.widget.VSistersScrollListener;
+import com.njit.buddy.app.widget.VSistersScrollView;
 
 import java.util.ArrayList;
 
@@ -54,7 +54,7 @@ public class HugActivity extends AppCompatActivity {
                 tryRefreshHugList();
             }
         });
-        ((BuddyScrollView) findViewById(R.id.scroll_view_hugs)).setScrollListener(new BuddyScrollListener() {
+        ((VSistersScrollView) findViewById(R.id.scroll_view_hugs)).setScrollListener(new VSistersScrollListener() {
             @Override
             public void onBottomReached() {
                 tryReadMoreHugs();

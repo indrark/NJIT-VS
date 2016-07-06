@@ -11,8 +11,8 @@ import android.widget.LinearLayout;
 import com.njit.buddy.app.R;
 import com.njit.buddy.app.entity.Post;
 import com.njit.buddy.app.network.task.PostListTask;
-import com.njit.buddy.app.widget.BuddyScrollListener;
-import com.njit.buddy.app.widget.BuddyScrollView;
+import com.njit.buddy.app.widget.VSistersScrollListener;
+import com.njit.buddy.app.widget.VSistersScrollView;
 import com.njit.buddy.app.widget.PostView;
 
 import java.util.ArrayList;
@@ -41,8 +41,8 @@ public class AttentionFragment extends Fragment {
                     }
                 }
         );
-        BuddyScrollView post_scroll_view = (BuddyScrollView) getActivity().findViewById(R.id.scroll_view_attention);
-        post_scroll_view.setScrollListener(new BuddyScrollListener() {
+        VSistersScrollView post_scroll_view = (VSistersScrollView) getActivity().findViewById(R.id.scroll_view_attention);
+        post_scroll_view.setScrollListener(new VSistersScrollListener() {
             @Override
             public void onBottomReached() {
                 tryReadMorePosts();

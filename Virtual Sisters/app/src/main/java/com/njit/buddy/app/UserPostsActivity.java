@@ -10,8 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.njit.buddy.app.entity.Post;
 import com.njit.buddy.app.network.task.PostListTask;
-import com.njit.buddy.app.widget.BuddyScrollListener;
-import com.njit.buddy.app.widget.BuddyScrollView;
+import com.njit.buddy.app.widget.VSistersScrollListener;
+import com.njit.buddy.app.widget.VSistersScrollView;
 import com.njit.buddy.app.widget.PostView;
 
 import java.util.ArrayList;
@@ -53,8 +53,8 @@ public class UserPostsActivity extends AppCompatActivity {
                     }
                 }
         );
-        BuddyScrollView post_scroll_view = (BuddyScrollView) findViewById(R.id.scroll_view_user_posts);
-        post_scroll_view.setScrollListener(new BuddyScrollListener() {
+        VSistersScrollView post_scroll_view = (VSistersScrollView) findViewById(R.id.scroll_view_user_posts);
+        post_scroll_view.setScrollListener(new VSistersScrollListener() {
             @Override
             public void onBottomReached() {
                 tryReadMorePosts();

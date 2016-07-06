@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * @author toyknight 3/6/2016.
  */
-public class BuddyUseTask extends AsyncTask<Void, Void, Integer> {
+public class VSistersUseTask extends AsyncTask<Void, Void, Integer> {
 
     @Override
     protected Integer doInBackground(Void... params) {
