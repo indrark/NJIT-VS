@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">Virtual Sisters</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_terms">Terms And Conditions</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_account">Account</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_setting">Setting</string>
+    <string name="title_activity_hug">Hugs</string>
+    <string name="title_activity_comment">Comments</string>
+    <string name="title_activity_intro">Introduction</string>
+    <string name="title_activity_password_change">Change Password</string>
+    <string name="title_activity_user_posts">Posts</string>
+
+    <string name="label_add_post">Add Post</string>
+    <string name="label_account">Account</string>
+    <string name="label_profile">Profile</string>
+    <string name="label_setting">Setting</string>
+    <string name="label_back">Back</string>
+    <string name="label_edit">Edit</string>
+    <string name="label_change_password">Change Password</string>
+    <string name="label_logout">Logout</string>
+    <string name="label_done">Done</string>
+    <string name="label_post">Post</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_birthday">Birthday</string>
+    <string name="label_gender">Gender</string>
+    <string name="label_sexuality">Sexuality</string>
+    <string name="label_race">Race</string>
+    <string name="label_undefined">Undefined</string>
+    <string name="label_set">Set</string>
+    <string name="label_hug">Hug</string>
+    <string name="label_empty">None</string>
+    <string name="label_hug_back">Hug Back</string>
+    <string name="label_hugged_back">Hugged Back</string>
+    <string name="label_bell">Bell</string>
+    <string name="label_belled">Belled</string>
+    <string name="label_flag">Flag</string>
+    <string name="label_flagged">Flagged</string>
+    <string name="label_comments">Comments</string>
+    <string name="label_all">All</string>
+    <string name="label_loading">Loading…</string>
+    <string name="label_description">Description</string>
+    <string name="label_submit">Submit</string>
+    <string name="label_posts">Posts</string>
+    <string name="label_send">Send</string>
+    <string name="label_sending">Sending…</string>
+
+    <string name="tab_news">News Feed</string>
+    <string name="tab_attention">Special</string>
+    <string name="tab_mood">Mood</string>
+    <string name="tab_more">More</string>
+
+    <string name="key_preference">preference</string>
+    <string name="key_email">email</string>
+    <string name="key_username">username</string>
+    <string name="key_password">password</string>
+    <string name="key_tab">tab</string>
+    <string name="key_authorization">authorization</string>
+    <string name="key_uid">uid</string>
+    <string name="key_first_time">first_time</string>
+
+    <string name="message_choose_category">I want to…</string>
+    <string name="message_say_something">Say something…</string>
+    <string name="message_server_error">Oops, it seems the server was taking a nap :(</string>
+    <string name="message_unknown_error">A mysterious force brought away your request…</string>
+    <string name="message_invalid_email">Email not valid, please use NJIT email.</string>
+    <string name="message_invalid_password">Password not valid</string>
+    <string name="message_email_unavailable">This email is in use</string>
+    <string name="message_login_required">You are not logged in :(</string>
+    <string name="message_user_not_found">This user does not exist :(</string>
+    <string name="message_password_changed">Password has been changed.</string>
+    <string name="message_verification_code_sent">Verification code sent.</string>
+    <string name="message_mail_sending_too_frequent">Please wait a minute to send another mail.</string>
+    <string name="message_verification_code_error">Verification code is wrong :(</string>
+    <string name="message_verification_code_expired">Verification code expired, please get a new one.</string>
+
+    <string name="action_send_comment">Send</string>
+
+    <string name="hint_old_password">Enter your current password</string>
+    <string name="hint_new_password">Enter your new password</string>
+    <string name="hint_confirm_new_password">Confirm your new password</string>
+    <string name="hint_verification_code">Verification code</string>
+
+</resources>

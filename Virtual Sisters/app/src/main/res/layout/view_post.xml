@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/icon_margin"
+              android:background="@drawable/border_unchecked"
+              android:layout_marginBottom="@dimen/icon_margin">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_undefined"
+                android:id="@+id/tv_username"
+                android:layout_weight="1"
+                android:gravity="left"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_undefined"
+                android:id="@+id/tv_date"
+                android:layout_weight="1"
+                android:gravity="right"
+                />
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/label_undefined"
+            android:id="@+id/tv_content" android:paddingLeft="@dimen/widget_margin"
+            android:paddingRight="@dimen/widget_margin" android:paddingTop="@dimen/icon_margin"
+            android:paddingBottom="@dimen/icon_margin" android:textColor="@color/post_content"/>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+        <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:id="@+id/btn_flag"
+                android:src="@drawable/ic_flag_unselected"
+                android:contentDescription="@string/label_flag" android:padding="@dimen/icon_margin"/>
+        <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:id="@+id/btn_bell" android:src="@drawable/ic_bell_unselected"
+                android:contentDescription="@string/label_bell" android:padding="@dimen/icon_margin"/>
+        <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp" android:id="@+id/btn_comment" android:paddingLeft="@dimen/icon_margin"
+                android:paddingRight="@dimen/icon_margin">
+            <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="36dp"
+                    android:id="@+id/icon_comment" android:src="@drawable/ic_comment"
+                    android:paddingTop="@dimen/icon_margin" android:paddingBottom="@dimen/icon_margin"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/tv_comment_count" android:textColor="@color/notification"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:id="@+id/btn_hug" android:paddingLeft="@dimen/icon_margin"
+                android:paddingRight="@dimen/icon_margin">
+            <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="36dp"
+                    android:id="@+id/icon_hug" android:src="@drawable/ic_hug_unselected"
+                    android:paddingTop="@dimen/icon_margin" android:paddingBottom="@dimen/icon_margin"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/tv_hug_count" android:textColor="@color/notification"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

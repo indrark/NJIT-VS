@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="category">
+        <item>Confess</item>
+        <item>Ask</item>
+        <item>Vent</item>
+        <item>Laugh</item>
+        <item>Encourage</item>
+        <item>Announce</item>
+    </array>
+
+    <array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Trans</item>
+        <item>Gander Neutral</item>
+        <item>Gander Fluid</item>
+        <item>Its Complicated</item>
+        <item>Rather not say</item>
+    </array>
+
+    <array name="sexuality">
+        <item>Heterosexual</item>
+        <item>Homosexual</item>
+        <item>Bisexual</item>
+        <item>Pansexual</item>
+        <item>Asexual</item>
+        <item>Its Complicated</item>
+        <item>Rather Not Say</item>
+    </array>
+
+    <array name="race">
+        <item>undefined</item>
+    </array>
+
+</resources>

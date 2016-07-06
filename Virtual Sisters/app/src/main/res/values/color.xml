@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tab_background">#BA55D3</color>
+    <color name="notification">#B0151B</color>
+    <color name="post_content">#000000</color>
+
+</resources>
