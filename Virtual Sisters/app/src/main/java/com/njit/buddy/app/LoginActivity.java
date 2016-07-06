@@ -100,7 +100,7 @@ public class LoginActivity extends Activity {
     //}
 
     public void gotoBuddyPage() {
-        Intent intent = new Intent(this, BuddyActivity.class);
+        Intent intent = new Intent(this, VSistersActivity.class);
         startActivity(intent);
         showProgress(false);
         finish();

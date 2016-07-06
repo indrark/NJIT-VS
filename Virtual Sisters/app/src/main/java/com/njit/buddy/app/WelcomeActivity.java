@@ -37,7 +37,7 @@ public class WelcomeActivity extends Activity {
             startActivity(intent);
         } else {
             Connector.setAuthorization(authorization);
-            Intent intent = new Intent(this, BuddyActivity.class);
+            Intent intent = new Intent(this, VSistersActivity.class);
             startActivity(intent);
         }
         finish();

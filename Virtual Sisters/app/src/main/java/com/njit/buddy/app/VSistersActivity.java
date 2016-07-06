@@ -17,7 +17,7 @@ import com.njit.buddy.app.fragment.NewsFragment;
 /**
  * @author toyknight 8/16/2015.
  */
-public class BuddyActivity extends BuddyResumeRecordingActivity implements View.OnClickListener {
+public class VSistersActivity extends BuddyResumeRecordingActivity implements View.OnClickListener {
 
     private final int TAB_NEWS = 0x001;
     private final int TAB_ATTENTION = 0x002;
