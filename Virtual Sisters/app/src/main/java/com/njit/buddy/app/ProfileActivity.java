@@ -266,7 +266,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             input.setText(getProfile().getGender());
             dialog_builder.setView(input);
 
-           /* String[] genders = getResources().getStringArray(R.array.gender);
+            /* String[] genders = getResources().getStringArray(R.array.gender);
 
             final boolean[] checkedGenders = new boolean[]{
                     false,
@@ -290,7 +290,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                             currentItem + " " + isChecked, Toast.LENGTH_SHORT).show();
                 }
             }
-            ); */
+            );*/
 
             // Set up the buttons
             dialog_builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {

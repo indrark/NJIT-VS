@@ -79,6 +79,11 @@ public class PostView extends RelativeLayout {
         return preferences.getInt(getResources().getString(R.string.key_uid), 0);
     }
 
+    private int getMyUID() {
+        SharedPreferences preferences = getContext().getSharedPreferences("buddy", Context.MODE_PRIVATE);
+        return preferences.getInt(getResources().getString(R.string.key_uid), 0);
+    }
+
     public void setBellVisible(boolean visible) {
         View bell = findViewById(R.id.btn_bell);
         if (visible) {
@@ -86,6 +91,18 @@ public class PostView extends RelativeLayout {
         } else {
             bell.setVisibility(INVISIBLE);
         }
+    }
+
+    public boolean needBellButton() {
+        return (getPostData().getCategory()!=Post.ASK && getPostData().getUID()!=getMyUID());
+    }
+
+    public boolean needFlagButton() {
+        return (getPostData().getUID()!=getMyUID());
+    }
+
+    public boolean needCommentButton() {
+        return (getPostData().getCategory()== Post.ASK || getPostData().getCategory()== Post.ANNOUNCE);
     }
 
     public void updateView() {
@@ -107,13 +124,14 @@ public class PostView extends RelativeLayout {
             btn_flag.setImageDrawable(flagged ?
                     getResources().getDrawable(R.drawable.ic_flag_selected) :
                     getResources().getDrawable(R.drawable.ic_flag_unselected));
+            btn_flag.setVisibility(needFlagButton() ? View.VISIBLE : View.INVISIBLE);
             //bell button
             ImageView btn_bell = (ImageView) findViewById(R.id.btn_bell);
             if (btn_bell.getVisibility() == VISIBLE) {
                 btn_bell.setImageDrawable(belled ?
                         getResources().getDrawable(R.drawable.ic_bell_selected) :
                         getResources().getDrawable(R.drawable.ic_bell_unselected));
-                btn_bell.setVisibility(getPostData().getCategory() == Post.ASK ? View.INVISIBLE : View.VISIBLE);
+                btn_bell.setVisibility(needBellButton() ? View.VISIBLE : View.INVISIBLE);
             }
             //hug button
             ImageView icon_hug = (ImageView) findViewById(R.id.icon_hug);
@@ -128,7 +146,7 @@ public class PostView extends RelativeLayout {
             //comment button
             View btn_comment = findViewById(R.id.btn_comment);
             ((TextView) findViewById(R.id.tv_comment_count)).setText(Integer.toString(comments));
-            btn_comment.setVisibility(getPostData().getCategory() == Post.ASK ? View.VISIBLE : View.INVISIBLE);
+            btn_comment.setVisibility(needCommentButton()? View.VISIBLE : View.INVISIBLE);
         }
     }
 
