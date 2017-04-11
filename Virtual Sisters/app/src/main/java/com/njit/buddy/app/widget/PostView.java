@@ -102,7 +102,7 @@ public class PostView extends RelativeLayout {
     }
 
     public boolean needCommentButton() {
-        return (getPostData().getCategory()== Post.ASK || getPostData().getCategory()== Post.ANNOUNCE);
+        return (getPostData().getCategory()== Post.ASK || getPostData().getCategory()== Post.ANNOUNCE || getPostData().getCategory()== Post.ENCOURAGE || getPostData().getCategory()== Post.VENT || getPostData().getCategory()== Post.LAUGH || getPostData().getCategory()== Post.CONFESS);
     }
 
     public void updateView() {
