@@ -224,6 +224,7 @@ public class VSistersActivity extends VSistersResumeRecordingActivity implements
                } else {
                     transaction.show(mood_fragment);
                 }
+                mood_fragment.tryRefreshMoodList();
                 updateActionBar(getResources().getString(R.string.tab_mood), false);
                 updateCurrentTab(TAB_MOOD);
                break;
