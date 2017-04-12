@@ -1,8 +1,11 @@
 package com.njit.buddy.app;
 
 import android.app.ActionBar;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,6 +16,8 @@ import com.njit.buddy.app.fragment.AttentionFragment;
 import com.njit.buddy.app.fragment.MoodFragment;
 import com.njit.buddy.app.fragment.MoreFragment;
 import com.njit.buddy.app.fragment.NewsFragment;
+import com.njit.buddy.app.network.task.MoodSubmitTask;
+import com.njit.buddy.app.util.DateUtil;
 
 /**
  * @author toyknight 8/16/2015.
@@ -34,6 +39,8 @@ public class VSistersActivity extends VSistersResumeRecordingActivity implements
     private View tab_mood_layout;
     private View tab_more_layout;
 
+    private Dialog dialog_mood;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +52,23 @@ public class VSistersActivity extends VSistersResumeRecordingActivity implements
 
         if(isFirstTimeUsing()) {
             gotoIntroductionActivity();
+        }
+        SharedPreferences preferences = getSharedPreferences("buddy", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putLong(getString(R.string.key_last_time), -1);
+        editor.apply();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        long last_use_time = getLastUsingTime();
+        if (last_use_time > 0) {
+            if (!DateUtil.isToday(last_use_time)) {
+                showMoodDialog();
+            }
+        } else {
+            showMoodDialog();
         }
     }
 
@@ -60,6 +84,33 @@ public class VSistersActivity extends VSistersResumeRecordingActivity implements
     private boolean isFirstTimeUsing() {
         SharedPreferences preferences = getSharedPreferences("buddy", Context.MODE_PRIVATE);
         return preferences.getBoolean(getResources().getString(R.string.key_first_time), true);
+    }
+
+    private long getLastUsingTime() {
+        SharedPreferences preferences = getSharedPreferences("buddy", Context.MODE_PRIVATE);
+        return preferences.getLong(getString(R.string.key_last_time), -1);
+    }
+
+    private void showMoodDialog() {
+        SharedPreferences preferences = getSharedPreferences("buddy", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putLong(getString(R.string.key_last_time), System.currentTimeMillis());
+        editor.apply();
+
+        dialog_mood.show();
+    }
+
+    private void submitMood(int mood) {
+        MoodSubmitTask task = new MoodSubmitTask() {
+            @Override
+            public void onSuccess(Integer result) {
+            }
+
+            @Override
+            public void onFail(int error_code) {
+            }
+        };
+        task.execute(mood);
     }
 
     @SuppressWarnings("ResourceType")
@@ -85,6 +136,19 @@ public class VSistersActivity extends VSistersResumeRecordingActivity implements
         //temporarily remove mood tab
 //        View tab_mood_layout = findViewById(R.id.tab_mood_layout);
 //        ((ViewGroup) tab_mood_layout.getParent()).removeView(tab_mood_layout);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.message_feeling)
+                .setItems(R.array.mood, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog_mood.dismiss();
+                        submitMood(which);
+                    }
+                });
+        dialog_mood = builder.create();
+        dialog_mood.setCancelable(false);
+        dialog_mood.setCanceledOnTouchOutside(false);
     }
 
     @Override

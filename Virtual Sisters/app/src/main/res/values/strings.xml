@@ -62,8 +62,11 @@
     <string name="key_authorization">authorization</string>
     <string name="key_uid">uid</string>
     <string name="key_first_time">first_time</string>
+    <string name="key_last_time">last_time</string>
+
 
     <string name="message_choose_category">I want to…</string>
+    <string name="message_feeling">How are you feeling today?</string>
     <string name="message_say_something">Say something…</string>
     <string name="message_server_error">Oops, it seems the server was taking a nap :(</string>
     <string name="message_unknown_error">A mysterious force brought away your request…</string>

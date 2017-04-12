@@ -14,7 +14,7 @@ import com.njit.buddy.app.entity.Post;
 import com.njit.buddy.app.network.task.BellTask;
 import com.njit.buddy.app.network.task.FlagTask;
 import com.njit.buddy.app.network.task.HugTask;
-import com.njit.buddy.app.util.DateParser;
+import com.njit.buddy.app.util.DateUtil;
 import com.njit.buddy.app.util.Log;
 
 /**
@@ -109,7 +109,7 @@ public class PostView extends RelativeLayout {
         if (getPostData() != null) {
             String post_username = getPostData().getUsername();
             String content = getPostData().getContent();
-            String date = DateParser.toString(getPostData().getTimestamp());
+            String date = DateUtil.toTimeString(getPostData().getTimestamp());
             int hugs = getPostData().getHugs();
             int comments = getPostData().getComments();
             boolean flagged = getPostData().isFlagged();
@@ -169,7 +169,7 @@ public class PostView extends RelativeLayout {
         intent.putExtra("pid", getPostData().getPID());
         intent.putExtra("uid", getPostData().getUID());
         intent.putExtra("username", getPostData().getUsername());
-        intent.putExtra("date", DateParser.toString(getPostData().getTimestamp()));
+        intent.putExtra("date", DateUtil.toTimeString(getPostData().getTimestamp()));
         intent.putExtra("content", getPostData().getContent());
         getContext().startActivity(intent);
         ((Activity) getContext()).overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);

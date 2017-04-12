@@ -34,4 +34,14 @@
         <item>undefined</item>
     </array>
 
+    <array name="mood">
+        <item>Insanely Great</item>
+        <item>Great</item>
+        <item>Good</item>
+        <item>Okay</item>
+        <item>Meh</item>
+        <item>Bad</item>
+        <item>Could not be worse</item>
+    </array>
+
 </resources>
