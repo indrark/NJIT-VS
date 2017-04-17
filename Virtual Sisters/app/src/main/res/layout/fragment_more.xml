@@ -45,6 +45,7 @@
                             android:layout_height="fill_parent"
                             android:textAppearance="?android:attr/textAppearanceMedium"
                             android:text="@string/label_account"
+                            android:textStyle="bold"
                             android:id="@+id/tv_account"
                             android:paddingLeft="@dimen/widget_margin"
                             android:gravity="center"/>
@@ -85,6 +86,7 @@
                         android:layout_weight="1"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="@string/label_profile"
+                        android:textStyle="bold"
                         android:id="@+id/tv_profile"/>
 
                 <ImageView
@@ -116,6 +118,7 @@
                         android:layout_weight="1"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="@string/label_setting"
+                        android:textStyle="bold"
                         android:id="@+id/tv_setting"/>
 
                 <ImageView
@@ -140,6 +143,7 @@
             android:layout_width="334dp"
             android:layout_height="267dp"
             android:text="                          INSTRUCTIONS\n\nHug: To give feedback to a post. \n\nComment: To provide comments on posts in the Ask category.\n\nFlag: To report any inappropriate posts.\n\nBell: To give more attention to a posts."
+            android:textStyle="bold"
             android:id="@+id/textView"
             android:textSize="16sp"
             android:layout_gravity="center_horizontal|bottom"

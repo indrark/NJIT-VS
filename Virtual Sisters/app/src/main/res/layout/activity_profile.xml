@@ -47,6 +47,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="@string/label_posts"
+                        android:textStyle="bold"
                         android:id="@+id/label_posts"/>
                 <Space
                         android:layout_width="0dp"

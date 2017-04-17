@@ -46,7 +46,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:text="@string/tab_news"
-                        android:textColor="#000000"/>
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
             </LinearLayout>
         </RelativeLayout>
 
@@ -76,7 +77,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:text="@string/tab_attention"
-                        android:textColor="#000000"/>
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
             </LinearLayout>
         </RelativeLayout>
 
@@ -106,7 +108,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:text="@string/tab_mood"
-                        android:textColor="#000000"/>
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
             </LinearLayout>
         </RelativeLayout>
 
@@ -136,7 +139,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:text="@string/tab_more"
-                        android:textColor="#000000"/>
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
             </LinearLayout>
         </RelativeLayout>
 
