@@ -4,20 +4,20 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <com.njit.buddy.app.widget.CategorySelector
+    <com.njit.buddy.application.widget.CategorySelector
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/icon_margin"
             android:paddingBottom="@dimen/icon_margin"
             android:id="@+id/category_selector">
-    </com.njit.buddy.app.widget.CategorySelector>
+    </com.njit.buddy.application.widget.CategorySelector>
 
     <android.support.v4.widget.SwipeRefreshLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/swipe_container_news">
 
-        <com.njit.buddy.app.widget.VSistersScrollView
+        <com.njit.buddy.application.widget.VSistersScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/scroll_view_news"
@@ -30,7 +30,7 @@
                     android:id="@+id/news_layout">
             </LinearLayout>
 
-        </com.njit.buddy.app.widget.VSistersScrollView>
+        </com.njit.buddy.application.widget.VSistersScrollView>
 
     </android.support.v4.widget.SwipeRefreshLayout>
 
