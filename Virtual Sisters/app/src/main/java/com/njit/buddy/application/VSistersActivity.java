@@ -49,9 +49,9 @@ public class VSistersActivity extends VSistersResumeRecordingActivity implements
 
         setTabSelection(TAB_NEWS);
 
-        if(isFirstTimeUsing()) {
+        /*if(isFirstTimeUsing()) {
             gotoIntroductionActivity();
-        }
+        }*/
         SharedPreferences preferences = getSharedPreferences("buddy", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putLong(getString(R.string.key_last_time), -1);
@@ -71,14 +71,14 @@ public class VSistersActivity extends VSistersResumeRecordingActivity implements
         }
     }
 
-    private void gotoIntroductionActivity() {
+   /* private void gotoIntroductionActivity() {
         SharedPreferences preferences = getSharedPreferences("buddy", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putBoolean(getResources().getString(R.string.key_first_time), false);
         editor.apply();
         Intent intent = new Intent(this, IntroductionActivity.class);
         startActivity(intent);
-    }
+    } */
 
     private boolean isFirstTimeUsing() {
         SharedPreferences preferences = getSharedPreferences("buddy", Context.MODE_PRIVATE);
